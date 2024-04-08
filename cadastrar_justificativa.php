@@ -7,7 +7,7 @@ $txtDescricaoJustificativa = $_POST['txtDescricaoJustificativa'];
 $str_sql_cadastrar_justificativa = "insert into `justificativas` (`nome`, `descricao`) values ('$txtNomeJustificativa', '$txtDescricaoJustificativa');";
 
 try {
-    $cadastrar_justificativa = mysql_query($conexao, $str_sql_cadastrar_justificativa);
+    $cadastrar_justificativa = mysqli_query($conexao, $str_sql_cadastrar_justificativa);
     $ultimo_id = $conexao->insert_id;
     $_SESSION['idJustificativa'] = $ultimo_id;
     die('idJustificativa: ' . $_SESSION['idJustificativa']);

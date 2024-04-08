@@ -7,7 +7,7 @@ $txtDescricaoRestricao = $_POST['txtDescricaoRestricao'];
 $str_sql_cadastrar_restricao = "insert into `restricaos` (`nome`, `descricao`) values ('$txtNomeRestricao', '$txtDescricaoRestricao');";
 
 try {
-    $cadastrar_restricao = mysql_query($conexao, $str_sql_cadastrar_restricao);
+    $cadastrar_restricao = mysqli_query($conexao, $str_sql_cadastrar_restricao);
     $ultimo_id = $conexao->insert_id;
     $_SESSION['idRestricao'] = $ultimo_id;
     die('idRestricao: ' . $_SESSION['idRestricao']);

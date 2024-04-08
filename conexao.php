@@ -15,7 +15,7 @@ if($_SERVER['SERVER_NAME'] != 'localhost') {
     $host = 'otherhost.mysql.com';
 }
 
-$db = 'usuarios';
+$db = 'canvas';
 $usuario = 'root';
 $senha = '';
 

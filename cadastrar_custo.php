@@ -1,16 +1,16 @@
 <?php
 require_once('conexao.php');
 
-$txtNomeBeneficio = $_POST['txtNomeBeneficio'];
-$txtDescricaoBeneficio = $_POST['txtDescricaoBeneficio'];
+$txtNomeCusto = $_POST['txtNomeCusto'];
+$txtDescricaoCusto = $_POST['txtDescricaoCusto'];
 
-$str_sql_cadastrar_beneficio = "insert into `beneficios` (`nome`, `descricao`) values ('$txtNomeBeneficio', '$txtDescricaoBeneficio');";
+$str_sql_cadastrar_beneficio = "insert into `custo` (`nome`, `descricao`) values ('$txtNomeCusto', '$txtDescricaoCusto');";
 
 try {
-    $cadastrar_beneficio = mysql_query($conexao, $str_sql_cadastrar_beneficio);
+    $cadastrar_beneficio = mysqli_query($conexao, $str_sql_cadastrar_beneficio);
     $ultimo_id = $conexao->insert_id;
-    $_SESSION['idBeneficio'] = $ultimo_id;
-    die('idBeneficio: ' . $_SESSION['idBeneficio']);
+    $_SESSION['idCusto'] = $ultimo_id;
+    die('idCusto: ' . $_SESSION['idCusto']);
 } catch (Exception) {
     die('Não foi possível cadastrar o(a) beneficio str sql: ' . $str_sql_cadastrar_beneficio);
 }
