@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de login</title>
+</head>
+<body>
+    <form action="./validar_usuario.php" enctype="multipart/form-data" method="post">
+        <label for="txtLogin">Login</label>
+        <input type="text" id="txtLogin" name="txtLogin" />
+        <br />
+        <label for="txtSenha">Senha</label>
+        <input type="text" id="txtLogin" name="txtLogin" />
+        <br />
+        <label for="txtSenha">Senha</label>
+        <input type="password" id="txtSenha" name="txtSenha" />
+        <br />
+        <button onclick="verificar()">Validar usuário</button>
+    </form>
+    <script src="./ifelse-prof.js"></script>
+</body>
+</html>
